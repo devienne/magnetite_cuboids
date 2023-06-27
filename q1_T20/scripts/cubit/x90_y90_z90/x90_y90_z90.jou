@@ -1,0 +1,8 @@
+create brick x 0.1
+volume 1 scale x 0.9 y 0.9 z 0.9 
+volume 1 scheme tetmesh
+volume 1 size 0.008
+mesh volume 1
+block 101 volume all
+block all element type TETRA4
+export patran "C:/Users/josea/PhD/Magnetite/q1_T20/mesh/x90_y90_z90/x90_y90_z90.pat" overwrite

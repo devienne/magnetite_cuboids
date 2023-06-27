@@ -1,0 +1,13 @@
+ReadMesh 1 /Users/josea/PhD/Magnetite/q1_T20/mesh/x30_y30_z30/x30_y30_z30.pat
+
+Magnetite 20 C
+Minimize 
+External Field Direction 1 1 1
+External field strength 0 mT
+Loop field 300 -300 -5
+	External field strength $field$ mT
+	Randomize Magnetization 5
+	Minimize
+	WriteMagnetization /Users/josea/PhD/Magnetite/q1_T20/hyst/ground/x30_y30_z30/x30_y30_z30_T20/Hx0.577_Hy0.577_Hz0.577/Hx0.577_Hy0.577_Hz0.577_$field$mT
+	WriteHyst /Users/josea/PhD/Magnetite/q1_T20/hyst/hyst/x30_y30_z30/x30_y30_z30_T20/Hx0.577_Hy0.577_Hz0.577/Hx0.577_Hy0.577_Hz0.577
+EndLoop
